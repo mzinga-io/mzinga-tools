@@ -1,7 +1,7 @@
-import path from 'path';
-import loadConfig from 'payload/dist/config/load';
 import parser from '@apidevtools/swagger-parser';
+import loadConfig from 'mzinga/dist/config/load';
 import type { OpenAPIV3 } from 'openapi-types';
+import path from 'path';
 
 import { createDocument } from '../../src';
 import expectedSchema from './named-interfaces.expected.json';

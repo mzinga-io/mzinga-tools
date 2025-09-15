@@ -1,4 +1,4 @@
-import { GlobalAfterReadHook, CollectionAfterReadHook } from 'payload/types';
+import { CollectionAfterReadHook, GlobalAfterReadHook } from 'mzinga/types';
 
 import { selectInternal } from './select';
 

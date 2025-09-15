@@ -1,14 +1,14 @@
-import initTypescript from './typescript';
 import generateDocs from './generate-docs';
 import { getOptions, showHelp } from './options';
+import initTypescript from './typescript';
 
-const { help, payloadPath, configPath, outputPath, generatorOptions } = getOptions();
+const { help, mzingaPath, configPath, outputPath, generatorOptions } = getOptions();
 
 if (help) {
   showHelp();
 } else {
-  if (payloadPath) {
-    process.chdir(payloadPath);
+  if (mzingaPath) {
+    process.chdir(mzingaPath);
   }
 
   initTypescript();

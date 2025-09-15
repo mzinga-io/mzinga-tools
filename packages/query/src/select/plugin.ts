@@ -1,4 +1,4 @@
-import { Config } from 'payload/config';
+import { Config } from 'mzinga/config';
 import { collectionSelectHook, globalSelectHook } from './hooks';
 
 interface Options {

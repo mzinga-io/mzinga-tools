@@ -1,5 +1,5 @@
+import { SanitizedConfig } from 'mzinga/config';
 import type { OpenAPIV3 } from 'openapi-types';
-import { SanitizedConfig } from 'payload/config';
 import type { Options } from '../options';
 import { createRequestBody, createResponse } from '../schemas';
 

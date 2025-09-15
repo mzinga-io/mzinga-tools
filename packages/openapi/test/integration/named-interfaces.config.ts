@@ -1,4 +1,4 @@
-import { buildConfig, Config } from 'payload/config';
+import { buildConfig, Config } from 'mzinga/config';
 
 const config: Config = {
   collections: [

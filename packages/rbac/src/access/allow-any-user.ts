@@ -1,18 +1,18 @@
-import type { Access } from 'payload/types';
-import { Query, User } from '../types';
+import type { Access } from 'mzinga/types';
 import { createQuery } from '../query';
+import { Query, User } from '../types';
 
 /**
  * Access control function that allows access to any logged in user
  * @param where optional filter
  * @returns the evaluated filter or `true` if the user is logged in, else `false`
  * @example
- * import { allowAnyUser } from 'payload-rbac';
+ * import { allowAnyUser } from 'mzinga-rbac';
  *
  * // Allow full access to logged in users
  * const access = allowAnyUser();
  * @example
- * import { allowAnyUser } from 'payload-rbac';
+ * import { allowAnyUser } from 'mzinga-rbac';
  *
  * // Allow logged in users access to documents for which they are the author
  * const access = allowAnyUser<Post>({ author: { equals: ({ req }) => req.user!.id } });

@@ -1,22 +1,22 @@
-import payload from 'payload';
-import path from 'path';
 import fs from 'fs';
-import { User } from '../payload-types';
 import { MongoClient } from 'mongodb';
+import payload from 'mzinga';
+import path from 'path';
+import { contactFormData } from '../data/forms/contactFormData';
+import { mailingListFormData } from '../data/forms/mailingListFormData';
 import { generateContactFormSubmission, generateMailingListSubmission } from '../data/forms/submissionGenerator';
+import { mainMenuData } from '../data/mainMenu/mainMenuData';
+import { caseStudiesData } from '../data/pages/caseStudiesData';
 import { homeData } from '../data/pages/homeData';
 import { homeDataDE } from '../data/pages/homeDataDE';
 import { homeDataES } from '../data/pages/homeDataES';
 import { videoSeriesData } from '../data/pages/videoSeriesData';
-import { caseStudiesData } from '../data/pages/caseStudiesData';
-import { contactFormData } from '../data/forms/contactFormData';
-import { mailingListFormData } from '../data/forms/mailingListFormData';
-import { generateTsInterfacesData } from '../data/posts/generateTsInterfacesData';
-import { whiteLabelAdminUIData } from '../data/posts/whiteLabelAdminUIData';
 import { buildWebsiteData } from '../data/posts/buildWebsiteData';
-import { introducingPayloadData } from '../data/posts/introducingPayloadData';
 import { futurePostData } from '../data/posts/futurePostData';
-import { mainMenuData } from '../data/mainMenu/mainMenuData';
+import { generateTsInterfacesData } from '../data/posts/generateTsInterfacesData';
+import { introducingPayloadData } from '../data/posts/introducingPayloadData';
+import { whiteLabelAdminUIData } from '../data/posts/whiteLabelAdminUIData';
+import { User } from '../payload-types';
 
 export async function seed() {
   try {
@@ -64,7 +64,7 @@ async function seedData() {
     collection: 'users',
     data: {
       name: 'Demo User',
-      email: 'demo@payloadcms.com',
+      email: 'demo@mzinga.io',
       password: 'demo',
       roles: ['admin'],
     },
@@ -73,9 +73,9 @@ async function seedData() {
   const { id: imageId } = await payload.create<any>({
     collection: 'media',
     data: {
-      alt: 'Payload',
+      alt: 'MZinga',
     },
-    filePath: path.resolve(__dirname, './payload.jpg'),
+    filePath: path.resolve(__dirname, './mzinga.jpg'),
   });
 
   // Page - Home

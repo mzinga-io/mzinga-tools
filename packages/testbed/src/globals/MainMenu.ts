@@ -1,4 +1,4 @@
-import { GlobalConfig } from 'payload/types';
+import { GlobalConfig } from 'mzinga/types';
 import { MenuDescription } from '../blocks/MenuDescription';
 import { MenuFeature } from '../blocks/MenuFeature';
 import { MenuLink } from '../blocks/MenuLink';

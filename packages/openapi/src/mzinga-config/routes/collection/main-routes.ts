@@ -1,6 +1,6 @@
+import { SanitizedConfig } from 'mzinga/config';
+import { SanitizedCollectionConfig } from 'mzinga/types';
 import type { OpenAPIV3 } from 'openapi-types';
-import { SanitizedCollectionConfig } from 'payload/types';
-import { SanitizedConfig } from 'payload/config';
 import { basicParameters, findParameters } from '../../../base-config';
 import { Options } from '../../../options';
 import {
@@ -11,13 +11,13 @@ import {
   createUpsertConfirmationSchema,
   entityToSchema,
 } from '../../../schemas';
+import { getPlural, getPluralSchemaName, getSingular, getSingularSchemaName } from '../../../utils';
 import { getRouteAccess, includeIfAvailable } from '../../route-access';
-import { getSingular, getPlural, getSingularSchemaName, getPluralSchemaName } from '../../../utils';
 
 export const getMainRoutes = async (
   collection: SanitizedCollectionConfig,
   options: Options,
-  payloadConfig: SanitizedConfig,
+  mzingaConfig: SanitizedConfig,
 ): Promise<Pick<Required<OpenAPIV3.Document>, 'paths' | 'components'>> => {
   const singleItem = getSingular(collection);
   const plural = getPlural(collection);
@@ -124,7 +124,7 @@ export const getMainRoutes = async (
     },
   };
 
-  const { schema, fieldDefinitions } = await entityToSchema(payloadConfig, collection);
+  const { schema, fieldDefinitions } = await entityToSchema(mzingaConfig, collection);
   const { example, examples } = collection.custom?.openapi || {};
 
   const components: OpenAPIV3.ComponentsObject = {

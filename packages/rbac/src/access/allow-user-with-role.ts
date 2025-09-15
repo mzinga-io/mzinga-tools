@@ -1,5 +1,5 @@
-import { Access, Query, Role, User } from '../types';
 import { createQuery } from '../query';
+import { Access, Query, Role, User } from '../types';
 
 /**
  * Access control function that allows access to logged in users with a given role
@@ -7,12 +7,12 @@ import { createQuery } from '../query';
  * @param where optional filter
  * @returns the evaluated filter or `true` if the user has the given role, else `false`
  * @example
- * import { allowUserWithRole } from 'payload-rbac';
+ * import { allowUserWithRole } from 'mzinga-rbac';
  *
  * // Allow full access to users with the 'admin' role
  * const access = allowUserWithRole('admin');
  * @example
- * import { allowUserWithRole } from 'payload-rbac';
+ * import { allowUserWithRole } from 'mzinga-rbac';
  *
  * // Allow users with the 'reader' role access to published documents
  * const access =  allowUserWithRole<Media>('reader', { _status: { equals: 'published' } });

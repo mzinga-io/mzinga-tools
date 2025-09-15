@@ -1,10 +1,10 @@
 import type { OpenAPIV3 } from 'openapi-types';
 
-import { error } from './error';
-import { confirmation } from './confirm';
-import where from './where';
 import { Options } from '../options';
 import { createResponse } from '../schemas';
+import { confirmation } from './confirm';
+import { error } from './error';
+import where from './where';
 
 export * from './parameters';
 
@@ -24,7 +24,7 @@ const responses: Record<string, OpenAPIV3.ResponseObject> = {
 const createBaseConfig = (options: Options): OpenAPIV3.Document => ({
   openapi: '3.0.3',
   info: {
-    title: 'Payload CMS',
+    title: 'MZinga.io',
     version: '1.0.0',
   },
   paths: {},
@@ -54,8 +54,8 @@ const createBaseConfig = (options: Options): OpenAPIV3.Document => ({
     responses,
   },
   externalDocs: {
-    description: 'Payload REST API documentation',
-    url: 'https://payloadcms.com/docs/rest-api/overview',
+    description: 'MZinga REST API documentation',
+    url: 'https://mzinga.io/docs/rest-api/overview',
   },
 });
 

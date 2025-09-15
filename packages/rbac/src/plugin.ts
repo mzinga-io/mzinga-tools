@@ -1,14 +1,14 @@
-import { Config } from 'payload/config';
-import { SelectField } from 'payload/types';
+import { Config } from 'mzinga/config';
+import { SelectField } from 'mzinga/types';
 import { Options } from './types';
 
 /**
- * Payload rbac plugin, which adds roles to your auth collection, that can be used in the access functions
+ * MZinga rbac plugin, which adds roles to your auth collection, that can be used in the access functions
  * @param options the options for the plugin
- * @returns the payload-rbac plugin
+ * @returns the mzinga-rbac plugin
  * @example
- * import { buildConfig } from 'payload/config';
- * import rbac  from 'payload-rbac';
+ * import { buildConfig } from 'mzinga/config';
+ * import rbac  from 'mzinga-rbac';
  *
  * export default buildConfig({
  *   plugins: [
@@ -28,9 +28,7 @@ export const plugin =
     collections: config.collections?.map(collection => {
       if (!collection.auth || (options?.collections && !options.collections.includes(collection.slug))) return collection;
       if (collection.fields?.some(field => 'name' in field && field.name === 'roles')) {
-        throw new Error(
-          `Unable to enable payload-rbac on collection ${collection.slug}: collection already has a 'roles' field!`,
-        );
+        throw new Error(`Unable to enable mzinga-rbac on collection ${collection.slug}: collection already has a 'roles' field!`);
       }
 
       const rolesField: SelectField = {

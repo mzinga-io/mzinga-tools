@@ -1,4 +1,4 @@
-import { Block } from 'payload/types';
+import { Block } from 'mzinga/types';
 
 export const MenuTitle: Block = {
   slug: 'menuTitle',

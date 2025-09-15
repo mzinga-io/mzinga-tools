@@ -1,5 +1,5 @@
+import { Access, SanitizedCollectionConfig, SanitizedGlobalConfig } from 'mzinga/types';
 import type { OpenAPIV3 } from 'openapi-types';
-import { Access, SanitizedCollectionConfig, SanitizedGlobalConfig } from 'payload/types';
 import { Options } from '../options';
 
 const allowsAnonymous = async (access: Access): Promise<boolean> => {

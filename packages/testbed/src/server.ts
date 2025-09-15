@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import express from 'express';
-import payload from 'payload';
+import payload from 'mzinga';
 import { seed } from './cron/reset';
 
 dotenv.config();
@@ -13,13 +13,13 @@ app.get('/', function (_, res) {
 });
 
 const start = async () => {
-  // Initialize Payload
+  // Initialize MZinga
   await payload.init({
     secret: process.env.PAYLOAD_SECRET,
     mongoURL: process.env.MONGODB_URI,
     express: app,
     onInit: async () => {
-      payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`);
+      payload.logger.info(`MZinga Admin URL: ${payload.getAdminURL()}`);
 
       // Clear and reset database on server start
       // NOTE - this is only for demo purposes and should not be used

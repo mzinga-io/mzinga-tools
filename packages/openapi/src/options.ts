@@ -1,8 +1,8 @@
-import { SanitizedConfig } from 'payload/config';
-import { Version, getPayloadVersion, supports, toVersion } from './utils';
+import { SanitizedConfig } from 'mzinga/config';
+import { Version, getMZingaVersion, supports, toVersion } from './utils';
 
 /**
- * Payload openapi options
+ * MZinga openapi options
  */
 export interface RawOptions {
   /**
@@ -22,14 +22,14 @@ export interface RawOptions {
     custom?: boolean;
   };
   /**
-   * Payload version is automatically determined.
+   * MZinga version is automatically determined.
    * If this is not possible (for instance in monorepo), it can be provided as option
    */
-  payloadVersion?: string;
+  mzingaVersion?: string;
 }
 
 export interface Options {
-  payloadVersion?: Version;
+  mzingaVersion?: Version;
   access: {
     analyze: (slug: string) => boolean;
     cookieName: string;
@@ -47,17 +47,17 @@ export interface Options {
   };
 }
 
-export const parseOptions = async (options: RawOptions = {}, payloadConfig: SanitizedConfig): Promise<Options> => {
-  const payloadVersion = options.payloadVersion ? toVersion(options.payloadVersion) : await getPayloadVersion();
+export const parseOptions = async (options: RawOptions = {}, mzingaConfig: SanitizedConfig): Promise<Options> => {
+  const mzingaVersion = options.mzingaVersion ? toVersion(options.mzingaVersion) : await getMZingaVersion();
 
   return {
-    payloadVersion,
+    mzingaVersion,
     access: {
       analyze: Array.isArray(options.disableAccessAnalysis)
         ? slug => !(options.disableAccessAnalysis as string[]).includes(slug)
         : () => !options.disableAccessAnalysis,
-      cookieName: `${payloadConfig.cookiePrefix || 'payload'}-token`,
-      apiKey: payloadConfig.collections.some(collection => collection.auth?.useAPIKey),
+      cookieName: `${mzingaConfig.cookiePrefix || 'payload'}-token`,
+      apiKey: mzingaConfig.collections.some(collection => collection.auth?.useAPIKey),
     },
     include: {
       authPaths: !options.exclude?.authPaths,
@@ -67,7 +67,7 @@ export const parseOptions = async (options: RawOptions = {}, payloadConfig: Sani
       custom: !options.exclude?.custom,
     },
     supports: {
-      bulkOperations: supports(toVersion('1.6.24'), payloadVersion),
+      bulkOperations: supports(toVersion('1.6.24'), mzingaVersion),
     },
   };
 };

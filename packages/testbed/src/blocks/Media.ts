@@ -1,4 +1,4 @@
-import { Block } from 'payload/types';
+import { Block } from 'mzinga/types';
 import aspectRatio from '../fields/aspectRatio';
 
 export const Media: Block = {

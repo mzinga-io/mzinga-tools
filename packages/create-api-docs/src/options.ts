@@ -2,28 +2,28 @@ import commandLineArgs from 'command-line-args';
 import commandLineUsage from 'command-line-usage';
 import path from 'path';
 
-import { Options as OpenapiOptions } from 'payload-openapi';
+import { Options as OpenapiOptions } from 'mzinga-openapi';
 
 const optionList = [
   {
-    name: 'payload',
+    name: 'mzinga',
     alias: 'p',
     type: String,
-    description: 'Path to payload root folder, required if not current folder',
+    description: 'Path to mzinga root folder, required if not current folder',
     group: 'basic',
   },
   {
     name: 'config',
     alias: 'c',
     type: String,
-    description: 'Path to payload config',
+    description: 'Path to mzinga config',
     group: 'basic',
   },
   {
     name: 'output',
     alias: 'o',
     type: String,
-    description: 'Location to store the payload docs, default <payload-root-folder>/doc/spec.json',
+    description: 'Location to store the mzinga docs, default <mzinga-root-folder>/doc/spec.json',
     group: 'basic',
   },
   {
@@ -78,8 +78,8 @@ const optionList = [
 
 const sections = [
   {
-    header: 'create-payload-api-docs',
-    content: `Run 'npx create-payload-api-docs' from the root folder of your payload repository to generate the openapi docs.
+    header: 'create-mzinga-api-docs',
+    content: `Run 'npx create-mzinga-api-docs' from the root folder of your mzinga repository to generate the openapi docs.
 
     For more options, see the options list below.`,
   },
@@ -89,7 +89,7 @@ const sections = [
     group: ['basic'],
   },
   {
-    header: 'Generator options\n\nSee payload-openapi docs for more details: https://www.npmjs.com/package/payload-openapi',
+    header: 'Generator options\n\nSee mzinga-openapi docs for more details: https://www.npmjs.com/package/mzinga-openapi',
     optionList,
     group: ['options'],
   },
@@ -97,7 +97,7 @@ const sections = [
 
 type Options = {
   help?: boolean;
-  payloadPath?: string;
+  mzingaPath?: string;
   configPath?: string;
   outputPath?: string;
   generatorOptions: OpenapiOptions;
@@ -130,7 +130,7 @@ export const getOptions = (): Options => {
 
   return {
     help: args.help,
-    payloadPath: toAbsolutePath(args.payload),
+    mzingaPath: toAbsolutePath(args.mzinga),
     configPath: toAbsolutePath(args.config),
     outputPath: toAbsolutePath(args.output),
     generatorOptions: toOpenapiOptions(args),

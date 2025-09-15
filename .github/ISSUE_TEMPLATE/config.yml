@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Tool ideas
-    url: https://github.com/teunmooij/payload-tools/discussions
+    url: https://github.com/mzinga-io/mzinga-tools/discussions
     about: Suggest a new tool or plugin
-  - name: Question about Payload tools
-    url: https://github.com/teunmooij/payload-tools/discussions
-    about: Please ask Payload tools-related questions in our GitHub Discussions
+  - name: Question about MZinga tools
+    url: https://github.com/mzinga-io/mzinga-tools/discussions
+    about: Please ask MZinga tools-related questions in our GitHub Discussions

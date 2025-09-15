@@ -1,14 +1,14 @@
-import { CollectionConfig } from 'payload/types';
-import slug from '../../fields/slug';
-import { Content } from '../../blocks/Content';
-import { Media } from '../../blocks/Media';
-import { Form } from '../../blocks/Form';
-import { MediaContent } from '../../blocks/MediaContent';
-import populateFullTitle from './hooks/populateFullTitle';
-import { MediaSlider } from '../../blocks/MediaSlider';
+import { CollectionConfig } from 'mzinga/types';
 import { Accordion } from '../../blocks/Accordion';
-import { populateAuthor } from './hooks/populateAuthor';
+import { Content } from '../../blocks/Content';
+import { Form } from '../../blocks/Form';
+import { Media } from '../../blocks/Media';
+import { MediaContent } from '../../blocks/MediaContent';
+import { MediaSlider } from '../../blocks/MediaSlider';
 import { hero } from '../../fields/hero';
+import slug from '../../fields/slug';
+import { populateAuthor } from './hooks/populateAuthor';
+import populateFullTitle from './hooks/populateFullTitle';
 
 export const Pages: CollectionConfig = {
   // the slug is used for naming the collection in the database and the APIs that are open. For example: api/pages/${id}
@@ -29,7 +29,7 @@ export const Pages: CollectionConfig = {
     // update,
     // delete,
   },
-  // versioning with drafts enabled tells Payload to save documents to a separate collection in the database and allow publishing
+  // versioning with drafts enabled tells MZinga to save documents to a separate collection in the database and allow publishing
   versions: {
     drafts: true,
   },
@@ -130,7 +130,7 @@ export const Pages: CollectionConfig = {
       type: 'relationship',
       relationTo: 'pages',
       maxDepth: 0,
-      // telling Payload to add an index to a field instructs the database to create it for enhanced query performance
+      // telling MZinga to add an index to a field instructs the database to create it for enhanced query performance
       index: true,
       admin: {
         position: 'sidebar',

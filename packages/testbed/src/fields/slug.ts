@@ -1,6 +1,6 @@
-import { Field } from 'payload/types';
-import formatSlug from '../utilities/formatSlug';
+import { Field } from 'mzinga/types';
 import deepMerge from '../utilities/deepMerge';
+import formatSlug from '../utilities/formatSlug';
 
 type Slug = (fieldToUse?: string, overrides?: Partial<Field>) => Field;
 

@@ -1,11 +1,11 @@
-import { CollectionConfig } from 'payload/types';
+import { blockAll } from 'mzinga-rbac';
+import { CollectionConfig } from 'mzinga/types';
 import path from 'path';
-import { blockAll } from 'payload-rbac';
 
 const Media: CollectionConfig = {
   slug: 'media',
   access: {
-    // Payload's access control functions apply to files also, meaning you can permit or deny file downloads easily
+    // MZinga's access control functions apply to files also, meaning you can permit or deny file downloads easily
     read: () => true,
 
     // access is limited for demo purposes, remove to restore upload capability
@@ -37,18 +37,18 @@ const Media: CollectionConfig = {
   },
 
   // file uploads are stored on the server by default, plugins are available for cloud storage
-  // https://github.com/richardvanbergen/payload-plugin-cloud-storage as an example
+  // https://github.com/mzinga-io/mzinga-core/packages/plugin-cloud-storage as an example
   upload: {
     // from the imageSizes below, the admin UI will show this size for previewing
     adminThumbnail: 'thumbnail',
 
-    // staticDir tell Payload where to store files to and allows them to be served
+    // staticDir tell MZinga where to store files to and allows them to be served
     staticDir: path.resolve(__dirname, '../../media'),
 
     // limit the types of files allowed and request validation
     mimeTypes: ['image/png', 'image/jpeg'],
 
-    // in addition to the original file, Payload saves resized images automatically
+    // in addition to the original file, MZinga saves resized images automatically
     imageSizes: [
       {
         name: 'thumbnail',

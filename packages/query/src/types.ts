@@ -1,5 +1,5 @@
-import { Operator } from 'payload/types';
-import type { ObjectPaths, ValueAtPath, Join, Split, IsAny } from 'ts-powertypes';
+import { Operator } from 'mzinga/types';
+import type { IsAny, Join, ObjectPaths, Split, ValueAtPath } from 'ts-powertypes';
 
 type GreaterLessOperand<Field> = IsAny<Field> extends true
   ? number | Date
@@ -52,7 +52,7 @@ type ActiveWhereField<Field, TInput> = {
 type PathToString<T> = T extends any ? Join<T, '.'> : never;
 
 /**
- * Strong typed version of Payload's `Where`
+ * Strong typed version of MZinga's `Where`
  * @template TCollection type of the collection on which this filter will be used
  * @example
  * {
@@ -69,7 +69,7 @@ export type Filter<TCollection extends object = Record<string, unknown>> = {
 };
 
 /**
- * Strong typed version of Payload's `Where`, with option to use functions as operands.
+ * Strong typed version of MZinga's `Where`, with option to use functions as operands.
  * Use `toFilter` to turn a `Query` into a `Filter`.
  * @template TCollection type of the collection on which this filter will be used
  * @template TData type of data that will be passed into the function operands

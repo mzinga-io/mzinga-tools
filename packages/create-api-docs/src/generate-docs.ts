@@ -1,8 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-import { createDocument, Options } from 'payload-openapi';
-import loadConfig from 'payload/dist/config/load';
+import { createDocument, Options } from 'mzinga-openapi';
+import loadConfig from 'mzinga/dist/config/load';
 
 export default async (configPath?: string, outputPath = 'doc/spec.json', options?: Options) => {
   if (configPath) {

@@ -1,9 +1,9 @@
-import { Options as OpenApiOptions } from 'payload-openapi';
+import { Options as OpenApiOptions } from 'mzinga-openapi';
 import { SwaggerUiOptions } from 'swagger-ui-express';
 
 interface SwaggerOptions {
   /**
-   * Customize the payload-swagger routes
+   * Customize the mzinga-swagger routes
    */
   routes?: {
     /**
@@ -31,12 +31,12 @@ interface SwaggerOptions {
   /**
    * Throw on error
    * @default false
-   * @description If set to true, the plugin will throw the error if any error occurs while generating the openapi document, causing Payload to fail to start.
+   * @description If set to true, the plugin will throw the error if any error occurs while generating the openapi document, causing MZinga to fail to start.
    */
   throwOnError?: boolean;
 }
 
 /**
- * Payload swagger options
+ * MZinga swagger options
  */
 export type Options = OpenApiOptions & SwaggerOptions;

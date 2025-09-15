@@ -1,5 +1,5 @@
-import { Access } from 'payload/config';
-import { CollectionConfig } from 'payload/types';
+import { Access } from 'mzinga/config';
+import { CollectionConfig } from 'mzinga/types';
 
 const demoUserAccess: Access = ({ req: { user } }) => {
   // return false to deny a user
@@ -43,7 +43,7 @@ const Users: CollectionConfig = {
     {
       name: 'name',
       type: 'text',
-      // saveToJWT tells Payload to include the field data to the JSON web token used to authenticate users
+      // saveToJWT tells MZinga to include the field data to the JSON web token used to authenticate users
       saveToJWT: true,
     },
   ],

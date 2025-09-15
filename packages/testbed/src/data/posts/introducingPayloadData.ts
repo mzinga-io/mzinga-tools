@@ -1,6 +1,6 @@
 export function introducingPayloadData(authorId: string, categoryId: string, imageId: string) {
   return {
-    title: "Introducing Payload - 2021's Node + React Headless CMS for JavaScript Developers",
+    title: "Introducing MZinga - 2021's Node + React Headless CMS for JavaScript Developers",
     author: authorId,
     publishDate: '2021-01-13T05:00:00.000Z',
     category: [categoryId],
@@ -24,7 +24,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'p',
                 children: [
                   {
-                    text: 'Hi—my name is James and I’m one of the founders of Payload CMS. After two years of development and thousands of commits, I am extremely excited to announce that Payload CMS is now available to the public. It’s our response to the surprisingly sparse JavaScript CMS market and we hope that its arrival improves the development workflow of engineers all over the world.',
+                    text: 'Hi—my name is James and I’m one of the founders of MZinga. After two years of development and thousands of commits, I am extremely excited to announce that MZinga is now available to the public. It’s our response to the surprisingly sparse JavaScript CMS market and we hope that its arrival improves the development workflow of engineers all over the world.',
                   },
                 ],
               },
@@ -32,7 +32,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'p',
                 children: [
                   {
-                    text: 'Payload has already been put through the test with an array of pilot projects that ranged from video game backend to full e-commerce store development, virtual event platform, and more. Through the projects we’ve released with Payload thus far, our own team’s efficiency has absolutely skyrocketed and we’re confident that it’s only going to get better from here.',
+                    text: 'MZinga has already been put through the test with an array of pilot projects that ranged from video game backend to full e-commerce store development, virtual event platform, and more. Through the projects we’ve released with MZinga thus far, our own team’s efficiency has absolutely skyrocketed and we’re confident that it’s only going to get better from here.',
                   },
                 ],
               },
@@ -47,7 +47,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
               {
                 children: [
                   {
-                    text: 'We would greatly appreciate if you were to install Payload, give it a shot, and let us know what you think. Any type of feedback is welcome - be it about how we write our docs, about your experience using Payload in your projects, or anything else!',
+                    text: 'We would greatly appreciate if you were to install Payload, give it a shot, and let us know what you think. Any type of feedback is welcome - be it about how we write our docs, about your experience using MZinga in your projects, or anything else!',
                   },
                 ],
               },
@@ -63,7 +63,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'p',
                 children: [
                   {
-                    text: 'We built Payload because, over the years, my team and I have come to understand exactly what we need out of a CMS to build projects—big or small—for our clients:',
+                    text: 'We built MZinga because, over the years, my team and I have come to understand exactly what we need out of a CMS to build projects—big or small—for our clients:',
                   },
                 ],
               },
@@ -122,7 +122,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
               {
                 children: [
                   {
-                    text: 'Payload is totally self-hosted. You control everything, at all times.',
+                    text: 'MZinga is totally self-hosted. You control everything, at all times.',
                   },
                 ],
                 type: 'h6',
@@ -131,12 +131,12 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'p',
                 children: [
                   {
-                    text: 'Find out how to install Payload by ',
+                    text: 'Find out how to install MZinga by ',
                   },
                   {
                     type: 'link',
                     newTab: false,
-                    url: 'https://payloadcms.com/docs/getting-started/installation',
+                    url: 'https://mzinga.io/docs/getting-started/installation',
                     children: [
                       {
                         text: 'heading to our Docs',
@@ -188,7 +188,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                   {
                     type: 'link',
                     newTab: false,
-                    url: 'https://payloadcms.com/docs/admin/overview',
+                    url: 'https://mzinga.io/docs/admin/overview',
                     children: [
                       {
                         text: 'Payload’s Admin panel',
@@ -252,12 +252,12 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'h6',
                 children: [
                   {
-                    text: 'Payload comes with ',
+                    text: 'MZinga comes with ',
                   },
                   {
                     type: 'link',
                     newTab: false,
-                    url: 'https://payloadcms.com/docs/fields/overview',
+                    url: 'https://mzinga.io/docs/fields/overview',
                     children: [
                       {
                         text: 'extremely advanced field types',
@@ -296,7 +296,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'h6',
                 children: [
                   {
-                    text: 'Payload is written in TypeScript and is JS top to bottom—Node, React, Express, MongoDB.',
+                    text: 'MZinga is written in TypeScript and is JS top to bottom—Node, React, Express, MongoDB.',
                   },
                 ],
               },
@@ -336,12 +336,12 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'h6',
                 children: [
                   {
-                    text: 'Payload comes with ',
+                    text: 'MZinga comes with ',
                   },
                   {
                     type: 'link',
                     newTab: false,
-                    url: 'https://payloadcms.com/docs/authentication/overview',
+                    url: 'https://mzinga.io/docs/authentication/overview',
                     children: [
                       {
                         text: 'robust, reusable authentication',
@@ -365,7 +365,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'p',
                 children: [
                   {
-                    text: 'In addition to just being able to log in and log out, Payload ships with everything a fully-featured app needs when it comes to authentication:',
+                    text: 'In addition to just being able to log in and log out, MZinga ships with everything a fully-featured app needs when it comes to authentication:',
                   },
                 ],
               },
@@ -441,7 +441,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'p',
                 children: [
                   {
-                    text: 'Payload supports as many authentication-ready collections as you need—meaning you could easily maintain a collection of Admins as well as a collection of Customers—each storing separate information and having separate access control to your documents.',
+                    text: 'MZinga supports as many authentication-ready collections as you need—meaning you could easily maintain a collection of Admins as well as a collection of Customers—each storing separate information and having separate access control to your documents.',
                   },
                 ],
               },
@@ -457,12 +457,12 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'p',
                 children: [
                   {
-                    text: 'One of the best parts about Payload is its ',
+                    text: 'One of the best parts about MZinga is its ',
                   },
                   {
                     type: 'link',
                     newTab: false,
-                    url: 'https://payloadcms.com/docs/access-control/overview',
+                    url: 'https://mzinga.io/docs/access-control/overview',
                     children: [
                       {
                         text: 'function-based Access Control',
@@ -494,12 +494,12 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'h6',
                 children: [
                   {
-                    text: 'Payload comes with ',
+                    text: 'MZinga comes with ',
                   },
                   {
                     type: 'link',
                     newTab: false,
-                    url: 'https://payloadcms.com/docs/upload/overview',
+                    url: 'https://mzinga.io/docs/upload/overview',
                     children: [
                       {
                         text: 'full upload support',
@@ -531,7 +531,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'h6',
                 children: [
                   {
-                    text: 'Payload is completely config-based—and its configs are extremely simple to write. You can make full use of ES6 and store your configs directly in your repo. ',
+                    text: 'MZinga is completely config-based—and its configs are extremely simple to write. You can make full use of ES6 and store your configs directly in your repo. ',
                   },
                   {
                     text: 'Git pull, get your schema.',
@@ -559,7 +559,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'h6',
                 children: [
                   {
-                    text: 'Payload uses your Express server. Not the other way around. Do with it what you must - including using the same server to run a NextJS frontend.',
+                    text: 'MZinga uses your Express server. Not the other way around. Do with it what you must - including using the same server to run a NextJS frontend.',
                   },
                 ],
               },
@@ -583,12 +583,12 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'h6',
                 children: [
                   {
-                    text: 'Payload comes with ',
+                    text: 'MZinga comes with ',
                   },
                   {
                     type: 'link',
                     newTab: false,
-                    url: 'https://payloadcms.com/docs/configuration/localization',
+                    url: 'https://mzinga.io/docs/configuration/localization',
                     children: [
                       {
                         text: 'field-based localization support',
@@ -612,7 +612,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'h4',
                 children: [
                   {
-                    text: 'Payload packages up everything we’ve needed for so long into one CMS and does so with flying colors.',
+                    text: 'MZinga packages up everything we’ve needed for so long into one CMS and does so with flying colors.',
                   },
                 ],
               },
@@ -644,7 +644,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'p',
                 children: [
                   {
-                    text: 'While building Payload, we’ve taken great strides to ensure that any learning you need to do to get up and running with Payload is kept to the absolute minimum. Instead, you should be learning or practicing JavaScript. Our abstractions are as simple as possible so that you’ll understand how your CMS works, because you will have written it.',
+                    text: 'While building Payload, we’ve taken great strides to ensure that any learning you need to do to get up and running with MZinga is kept to the absolute minimum. Instead, you should be learning or practicing JavaScript. Our abstractions are as simple as possible so that you’ll understand how your CMS works, because you will have written it.',
                   },
                 ],
               },
@@ -668,7 +668,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'p',
                 children: [
                   {
-                    text: 'Payload aims to fix that. It has a massive emphasis placed on the developer experience. We strive to give you what you need and nothing more. It’s a code-based CMS. That means your code—not ours. We give you the structure and the openendedness that you need to write your apps, but we don’t impose anything on what you need to do.',
+                    text: 'MZinga aims to fix that. It has a massive emphasis placed on the developer experience. We strive to give you what you need and nothing more. It’s a code-based CMS. That means your code—not ours. We give you the structure and the openendedness that you need to write your apps, but we don’t impose anything on what you need to do.',
                   },
                 ],
               },
@@ -713,7 +713,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                   {
                     type: 'link',
                     newTab: false,
-                    url: 'https://payloadcms.com/docs/getting-started/what-is-payload',
+                    url: 'https://mzinga.io/docs/getting-started/what-is-payload',
                     children: [
                       {
                         text: 'documentation',
@@ -721,7 +721,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                     ],
                   },
                   {
-                    text: ' for more information about how Payload works and how to use it.',
+                    text: ' for more information about how MZinga works and how to use it.',
                   },
                 ],
               },
@@ -766,7 +766,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 type: 'p',
                 children: [
                   {
-                    text: 'We honestly want Payload to become the best JavaScript CMS that it possibly can be, and we look forward to continuing to strive to make that happen.',
+                    text: 'We honestly want MZinga to become the best JavaScript CMS that it possibly can be, and we look forward to continuing to strive to make that happen.',
                   },
                 ],
               },
@@ -776,7 +776,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
                 link: {
                   type: 'custom',
                   label: 'Documentation',
-                  url: 'https://payloadcms.com/docs/getting-started/what-is-payload',
+                  url: 'https://mzinga.io/docs/getting-started/what-is-payload',
                   newTab: true,
                 },
                 id: '62007c57738c2e136e916272',
@@ -791,7 +791,7 @@ export function introducingPayloadData(authorId: string, categoryId: string, ima
       },
     ],
     meta: {
-      title: 'Payload CMS - Introducing Payload - Headless CMS for TypeScript Developers',
+      title: 'MZinga - Introducing MZinga - Headless CMS for TypeScript Developers',
       description:
         'Payload—a self-hosted Node, Express and React-based headless CMS, is now available. Best Headless CMS for modern TypeScript development',
       image: imageId,

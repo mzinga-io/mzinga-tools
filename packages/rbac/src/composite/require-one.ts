@@ -1,6 +1,6 @@
-import { Access as PayloadAccess } from 'payload/types';
-import { isFilter, getAccessEvaluationResult } from './helpers';
+import { Access as PayloadAccess } from 'mzinga/types';
 import { Access, User } from '../types';
+import { getAccessEvaluationResult, isFilter } from './helpers';
 
 /**
  * Access control function that only grants access if at least one of the underlying access control functions grant access.
@@ -8,7 +8,7 @@ import { Access, User } from '../types';
  * @param funcs the underlying access control functions
  * @returns the combined filter or `true` if access is granted, else `false`
  * @example
- * import { allowPublished, allowUserWithRole, requireOne } from 'payload-rbac';
+ * import { allowPublished, allowUserWithRole, requireOne } from 'mzinga-rbac';
  *
  * // Anyone has access to published documents, but only editors can see draft documents
  * const requireOne(allowPublished(), allowUserWithRole('editor'));

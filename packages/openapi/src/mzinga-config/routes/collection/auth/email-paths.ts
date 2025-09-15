@@ -1,5 +1,5 @@
+import { SanitizedCollectionConfig } from 'mzinga/types';
 import type { OpenAPIV3 } from 'openapi-types';
-import { SanitizedCollectionConfig } from 'payload/types';
 import { createRef } from '../../../../schemas';
 
 export const getEmailVerificationPaths = (collection: SanitizedCollectionConfig): OpenAPIV3.PathsObject => {

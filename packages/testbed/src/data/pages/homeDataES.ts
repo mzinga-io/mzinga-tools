@@ -9,7 +9,7 @@ export function homeDataES(imageId: string, userId: string) {
             type: 'h1',
             children: [
               {
-                text: 'Payload Manifestación',
+                text: 'MZinga Manifestación',
               },
             ],
           },
@@ -29,7 +29,7 @@ export function homeDataES(imageId: string, userId: string) {
               },
               {
                 type: 'link',
-                url: 'https://payloadcms.com',
+                url: 'https://mzinga.io',
                 newTab: false,
                 children: [
                   {
@@ -96,7 +96,7 @@ export function homeDataES(imageId: string, userId: string) {
                     },
                   ],
                   link: {
-                    url: 'https://payloadcms.com',
+                    url: 'https://mzinga.io',
                     type: 'custom',
                   },
                   alignment: 'center',
@@ -162,7 +162,7 @@ export function homeDataES(imageId: string, userId: string) {
     status: 'published',
     author: userId,
     meta: {
-      title: 'Payload CMS Demo - Página de Inicio',
+      title: 'MZinga Demo - Página de Inicio',
       description:
         'Aquí hay una columna de contenido y tiene un elemento multimedia incrustado dentro. Este contenido se utilizará para generar una meta descripción.',
       image: imageId,

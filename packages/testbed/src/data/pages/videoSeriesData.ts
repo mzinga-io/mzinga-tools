@@ -9,7 +9,7 @@ export function videoSeriesData(imageId: string, userId: string, parentId: strin
             type: 'h1',
             children: [
               {
-                text: 'Payload Video Series',
+                text: 'MZinga Video Series',
               },
             ],
           },
@@ -29,7 +29,7 @@ export function videoSeriesData(imageId: string, userId: string, parentId: strin
               },
               {
                 type: 'link',
-                url: 'https://payloadcms.com',
+                url: 'https://mzinga.io',
                 newTab: false,
                 children: [
                   {
@@ -49,7 +49,7 @@ export function videoSeriesData(imageId: string, userId: string, parentId: strin
               appearance: 'text',
               type: 'custom',
               label: 'Documentation',
-              url: 'https://payloadcms.com/docs/getting-started/what-is-payload',
+              url: 'https://mzinga.io/docs/getting-started/what-is-mzinga',
             },
             id: '61f9b0479d0e9c0b6424c3e0',
           },
@@ -110,7 +110,7 @@ export function videoSeriesData(imageId: string, userId: string, parentId: strin
                     },
                   ],
                   link: {
-                    url: 'https://payloadcms.com',
+                    url: 'https://mzinga.io',
                     type: 'custom',
                   },
                   alignment: 'center',
@@ -176,7 +176,7 @@ export function videoSeriesData(imageId: string, userId: string, parentId: strin
     status: 'published',
     author: userId,
     meta: {
-      title: 'Payload CMS Demo - Video Series',
+      title: 'MZinga Demo - Video Series',
       description:
         'Here is a column of content and it has an embedded Media element within it. This content will be used to generate a Meta Description.',
       image: imageId,

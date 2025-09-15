@@ -1,4 +1,4 @@
-import { SanitizedCollectionConfig, SanitizedGlobalConfig } from 'payload/types';
+import { SanitizedCollectionConfig, SanitizedGlobalConfig } from 'mzinga/types';
 import { getLabels } from './get-label';
 
 const getText = (collection: SanitizedCollectionConfig | SanitizedGlobalConfig, kind: 'singular' | 'plural'): string => {

@@ -1,49 +1,47 @@
-[![snyk](https://snyk.io/test/github/teunmooij/payload-tools/badge.svg)](https://snyk.io/test/github/teunmooij/payload-tools)
+# mzinga tools and plugins
 
-# payload tools and plugins
+This repository will contain multiple tools and plugins for [mzinga](https://mzinga.io):
 
-This repository will contain multiple tools and plugins for [payload cms](https://payloadcms.com):
+## [mzinga-openapi](./packages/openapi/README.md)
 
-## [payload-openapi](./packages/openapi/README.md)
+[![npm version](https://badge.fury.io/js/mzinga-openapi.svg)](https://www.npmjs.com/package/mzinga-openapi)
 
-[![npm version](https://badge.fury.io/js/payload-openapi.svg)](https://www.npmjs.com/package/payload-openapi)
+Openapi tool for mzinga cms:
 
-Openapi tool for payload cms:
+- generate openAPI 3 documentation from your MZinga config
 
-- generate openAPI 3 documentation from your Payload config
+## [mzinga-swagger](./packages/swagger/README.md)
 
-## [payload-swagger](./packages/swagger/README.md)
+[![npm version](https://badge.fury.io/js/mzinga-swagger.svg)](https://www.npmjs.com/package/mzinga-swagger)
 
-[![npm version](https://badge.fury.io/js/payload-swagger.svg)](https://www.npmjs.com/package/payload-swagger)
+Swagger plugin for mzinga cms:
 
-Swagger plugin for payload cms:
-
-- exposes openapi document generated with `payload-openapi`
+- exposes openapi document generated with `paylmzingaoad-openapi`
 - includes a swagger ui
-- easy setup as payload plugin
+- easy setup as mzinga plugin
 
-## [create-payload-api-docs](./packages/create-api-docs/README.md)
+## [create-mzinga-api-docs](./packages/create-api-docs/README.md)
 
-[![npm version](https://badge.fury.io/js/create-payload-api-docs.svg)](https://www.npmjs.com/package/create-payload-api-docs)
+[![npm version](https://badge.fury.io/js/create-mzinga-api-docs.svg)](https://www.npmjs.com/package/create-mzinga-api-docs)
 
-CLI for generating openAPI 3 documentation for your Payload cms
+CLI for generating openAPI 3 documentation for your MZinga cms
 
-## [payload-rbac](./packages/rbac/README.md)
+## [mzinga-rbac](./packages/rbac/README.md)
 
-[![npm version](https://badge.fury.io/js/payload-rbac.svg)](https://www.npmjs.com/package/payload-rbac)
+[![npm version](https://badge.fury.io/js/mzinga-rbac.svg)](https://www.npmjs.com/package/mzinga-rbac)
 
-Easy to use Role based access control for your Payload cms:
+Easy to use Role based access control for your MZinga cms:
 
 - plugin to extend your auth collection(s) with a `roles` property
 - lots of predefined access control functions
 - tools to combine access control functions to support more complex situations
 - fully compatible with any custom access control functions you might already have
 
-## [payload-query](./packages/query/README.md)
+## [mzinga-query](./packages/query/README.md)
 
-[![npm version](https://badge.fury.io/js/payload-query.svg)](https://www.npmjs.com/package/payload-query)
+[![npm version](https://badge.fury.io/js/mzinga-query.svg)](https://www.npmjs.com/package/mzinga-query)
 
-Query utility for your [Payload cms](https://payloadcms.com):
+Query utility for your [MZinga](https://mzinga.io):
 
 - create type safe queries
 - predefine queries to be constructed with data passed in later (e.g. request data)

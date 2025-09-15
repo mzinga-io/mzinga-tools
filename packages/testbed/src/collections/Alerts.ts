@@ -1,4 +1,4 @@
-import { CollectionConfig } from 'payload/types';
+import { CollectionConfig } from 'mzinga/types';
 import linkGroup from '../fields/linkGroup';
 
 export const Alerts: CollectionConfig = {

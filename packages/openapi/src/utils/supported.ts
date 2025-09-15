@@ -1,7 +1,7 @@
+import { entityToJSONSchema } from 'mzinga/utilities';
 import { OpenAPIV3 } from 'openapi-types';
-import { entityToJSONSchema } from 'payload/utilities';
-import { Options } from '../options';
 import createBaseConfig from '../base-config';
+import { Options } from '../options';
 import { Version, greaterOrEqual, toVersion } from './version';
 
 export const isSupported = (version?: Version) => {
@@ -24,8 +24,8 @@ export const getUnsupportedSchema = (options: Options): OpenAPIV3.Document => {
     ...base,
     info: {
       ...base.info,
-      description: `OpenAPI documentation is not supported for this version of Payload.<br/>
-        Please make sure  you are using payload version 1.6.1 or higher, but not between 1.9.3 and 1.10.1.`,
+      description: `OpenAPI documentation is not supported for this version of MZinga.<br/>
+        Please make sure  you are using mzinga version 0.0.2 or higher.`,
     },
   };
 };

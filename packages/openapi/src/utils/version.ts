@@ -25,9 +25,9 @@ export const supports = (initialVersion: Version | undefined, currentVersion: Ve
   return greaterOrEqual(currentVersion, initialVersion);
 };
 
-export const getPayloadVersion = async (): Promise<Version | undefined> => {
+export const getMZingaVersion = async (): Promise<Version | undefined> => {
   try {
-    const { version } = await import(path.join(process.cwd(), 'node_modules/payload/package.json'));
+    const { version } = await import(path.join(process.cwd(), 'node_modules/mzinga/package.json'));
     return version ? toVersion(version) : undefined;
   } catch (e) {
     return undefined;

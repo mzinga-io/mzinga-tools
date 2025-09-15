@@ -1,6 +1,6 @@
-import { toVersion, isSupported } from '../../src/utils';
+import { isSupported, toVersion } from '../../src/utils';
 
-jest.mock('payload/utilities', () => ({
+jest.mock('mzinga/utilities', () => ({
   entityToJSONSchema: 'not a function',
 }));
 

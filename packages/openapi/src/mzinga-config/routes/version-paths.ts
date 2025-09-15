@@ -1,33 +1,33 @@
+import { SanitizedConfig } from 'mzinga/config';
+import { SanitizedCollectionConfig, SanitizedGlobalConfig } from 'mzinga/types';
 import type { OpenAPIV3 } from 'openapi-types';
-import { SanitizedConfig } from 'payload/config';
-import { SanitizedCollectionConfig, SanitizedGlobalConfig } from 'payload/types';
 import { basicParameters, findParameters } from '../../base-config';
 import { Options } from '../../options';
 import { createPaginatedDocumentSchema, createRef, createResponse, entityToSchema } from '../../schemas';
 import { getPlural, getSingular, getSingularSchemaName } from '../../utils';
 import { getRouteAccess, isRouteAvailable } from '../route-access';
 
-const getRootPath = (slug: string, payloadConfig: SanitizedConfig) => {
-  if (payloadConfig.globals?.find(global => global.slug === slug)) return `/globals/${slug}/versions`;
+const getRootPath = (slug: string, mzingaConfig: SanitizedConfig) => {
+  if (mzingaConfig.globals?.find(global => global.slug === slug)) return `/globals/${slug}/versions`;
   return `/${slug}/versions`;
 };
 
-const getTags = (slug: string, payloadConfig: SanitizedConfig) =>
-  payloadConfig.globals?.find(global => global.slug === slug) ? [`global ${slug}`] : [slug];
+const getTags = (slug: string, mzingaConfig: SanitizedConfig) =>
+  mzingaConfig.globals?.find(global => global.slug === slug) ? [`global ${slug}`] : [slug];
 
 export const createVersionRoutes = async (
   config: SanitizedCollectionConfig | SanitizedGlobalConfig,
   options: Options,
-  payloadConfig: SanitizedConfig,
+  mzingaConfig: SanitizedConfig,
 ): Promise<Pick<Required<OpenAPIV3.Document>, 'paths' | 'components'>> => {
   if (!config.versions || !isRouteAvailable(config, 'readVersions')) return { paths: {}, components: {} };
 
-  const rootPath = getRootPath(config.slug, payloadConfig);
-  const tags = getTags(config.slug, payloadConfig);
+  const rootPath = getRootPath(config.slug, mzingaConfig);
+  const tags = getTags(config.slug, mzingaConfig);
   const security = await getRouteAccess(config, 'readVersions', options.access);
 
   // no need to map the fieldDefinitions, because they are already mapped in the main routes
-  const { schema } = await entityToSchema(payloadConfig, config);
+  const { schema } = await entityToSchema(mzingaConfig, config);
   const { id, createdAt, updatedAt, ...version } = schema.properties!;
 
   const versionedSchema: OpenAPIV3.SchemaObject = {

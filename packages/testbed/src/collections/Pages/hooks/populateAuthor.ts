@@ -1,4 +1,4 @@
-import { FieldHook } from 'payload/types';
+import { FieldHook } from 'mzinga/types';
 
 export const populateAuthor: FieldHook = async ({ req: { user }, value, operation }) => {
   // using this hook only the original creator of the document can be the author

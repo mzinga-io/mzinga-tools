@@ -1,4 +1,4 @@
-import { RichTextLeaf } from 'payload/dist/fields/config/types';
+import { RichTextLeaf } from 'mzinga/dist/fields/config/types';
 
 const defaultLeaves: RichTextLeaf[] = ['bold', 'italic', 'underline'];
 

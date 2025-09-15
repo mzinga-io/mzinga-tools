@@ -1,7 +1,7 @@
 name: Feature request
 description: Propose a feature you'd like to see added
-title: "[Feature request]:"
-labels: ["enhancement"]
+title: '[Feature request]:'
+labels: ['enhancement']
 body:
   - type: markdown
     attributes:
@@ -14,11 +14,11 @@ body:
       description: For which tool do you want to request a feature?
       multiple: false
       options:
-        - payload-openapi
-        - payload-swagger
-        - create-payload-api-docs
-        - payload-rbac
-        - payload-query
+        - mzinga-openapi
+        - mzinga-swagger
+        - create-mzinga-api-docs
+        - mzinga-rbac
+        - mzinga-query
     validations:
       required: true
   - type: textarea

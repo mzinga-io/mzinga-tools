@@ -35,7 +35,7 @@ npm i --save-dev create-payload-api-docs
 
 ## More configuration options
 
-`create-payload-api-docs` uses [payload-openapi](https://www.npmjs.com/package/payload-openapi) to generate the documentation. For more information about the available options, [see payload-openapi documentation](https://github.com/teunmooij/payload-tools/blob/main/packages/openapi/README.md).
+`create-payload-api-docs` uses [payload-openapi](https://www.npmjs.com/package/payload-openapi) to generate the documentation. For more information about the available options, [see payload-openapi documentation](https://github.com/mzinga-io/mzinga-tools/blob/main/packages/openapi/README.md).
 
 ## Version history
 

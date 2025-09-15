@@ -16,7 +16,7 @@ export function whiteLabelAdminUIData(authorId: string, categoryId: string, imag
                 type: 'h3',
                 children: [
                   {
-                    text: 'Easily make Payload the perfect white labeled headless CMS. With Payload, you get complete control of the look and feel of the Admin Panel.',
+                    text: 'Easily make MZinga the perfect white labeled headless CMS. With Payload, you get complete control of the look and feel of the Admin Panel.',
                   },
                 ],
               },
@@ -24,7 +24,7 @@ export function whiteLabelAdminUIData(authorId: string, categoryId: string, imag
                 type: 'p',
                 children: [
                   {
-                    text: 'Across the Admin UI, the branding from Payload is minimal so that the focus stays where it should be—on your application. By updating the Payload branding, you can create a customized interface and your client (or team, or whoever will access your admin panel) will be greeted with a dynamic interface that is consistent with your application branding.',
+                    text: 'Across the Admin UI, the branding from MZinga is minimal so that the focus stays where it should be—on your application. By updating the MZinga branding, you can create a customized interface and your client (or team, or whoever will access your admin panel) will be greeted with a dynamic interface that is consistent with your application branding.',
                   },
                 ],
               },
@@ -32,7 +32,7 @@ export function whiteLabelAdminUIData(authorId: string, categoryId: string, imag
                 type: 'p',
                 children: [
                   {
-                    text: 'In this blog post, you will learn how to rebrand and white label the Payload admin panel for your application by modifying the following elements:',
+                    text: 'In this blog post, you will learn how to rebrand and white label the MZinga admin panel for your application by modifying the following elements:',
                   },
                 ],
               },
@@ -92,7 +92,7 @@ export function whiteLabelAdminUIData(authorId: string, categoryId: string, imag
               {
                 children: [
                   {
-                    text: "You can use your own Payload app or start a new one for this tutorial. If you haven't started a project yet, you can get set up easily by running ",
+                    text: "You can use your own MZinga app or start a new one for this tutorial. If you haven't started a project yet, you can get set up easily by running ",
                   },
                   {
                     text: 'npx create-payload-app',
@@ -111,7 +111,7 @@ export function whiteLabelAdminUIData(authorId: string, categoryId: string, imag
                   {
                     type: 'link',
                     newTab: false,
-                    url: 'https://payloadcms.com/docs/getting-started/installation',
+                    url: 'https://mzinga.io/docs/getting-started/installation',
                     children: [
                       {
                         text: 'installation',
@@ -127,14 +127,14 @@ export function whiteLabelAdminUIData(authorId: string, categoryId: string, imag
                 type: 'h4',
                 children: [
                   {
-                    text: 'Payload Config',
+                    text: 'MZinga Config',
                   },
                 ],
               },
               {
                 children: [
                   {
-                    text: 'Start by navigating to your base Payload config file in which all options for the Admin panel are defined.',
+                    text: 'Start by navigating to your base MZinga config file in which all options for the Admin panel are defined.',
                   },
                 ],
               },
@@ -151,7 +151,7 @@ export function whiteLabelAdminUIData(authorId: string, categoryId: string, imag
                 link: {
                   type: 'custom',
                   label: 'Admin Panel',
-                  url: 'https://payloadcms.com/docs/admin/overview',
+                  url: 'https://mzinga.io/docs/admin/overview',
                   newTab: true,
                 },
                 id: '62007c57738c2e136e916272',
@@ -160,7 +160,7 @@ export function whiteLabelAdminUIData(authorId: string, categoryId: string, imag
                 link: {
                   type: 'custom',
                   label: 'Custom Components',
-                  url: 'https://payloadcms.com/docs/admin/components',
+                  url: 'https://mzinga.io/docs/admin/components',
                   newTab: true,
                 },
                 id: '62007f5322b03d23dd0e8812',
@@ -175,9 +175,9 @@ export function whiteLabelAdminUIData(authorId: string, categoryId: string, imag
       },
     ],
     meta: {
-      title: 'Payload CMS - Feature - Auto-generate TypeScript Interfaces',
+      title: 'MZinga - Feature - Auto-generate TypeScript Interfaces',
       description:
-        'Easily make Payload the perfect white labeled headless CMS. With Payload, you get complete control of the look and feel of the Admin Panel.',
+        'Easily make MZinga the perfect white labeled headless CMS. With Payload, you get complete control of the look and feel of the Admin Panel.',
       image: imageId,
     },
     createdAt: '2022-02-04T01:56:39.154Z',

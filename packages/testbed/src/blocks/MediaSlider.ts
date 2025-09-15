@@ -1,4 +1,4 @@
-import { Block } from 'payload/types';
+import { Block } from 'mzinga/types';
 import richText from '../fields/richText';
 
 export const MediaSlider: Block = {

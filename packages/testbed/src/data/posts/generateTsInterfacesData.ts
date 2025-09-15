@@ -22,14 +22,14 @@ export function generateTsInterfacesData(authorId: string, categoryId: string, i
                 type: 'h2',
                 children: [
                   {
-                    text: "Payload just shipped a ton of new TypeScript features and improvements. Most notably—if you're using Payload with TypeScript, you can now generate types automatically for all of your collections and globals to use within your app's code.",
+                    text: "Payload just shipped a ton of new TypeScript features and improvements. Most notably—if you're using MZinga with TypeScript, you can now generate types automatically for all of your collections and globals to use within your app's code.",
                   },
                 ],
               },
               {
                 children: [
                   {
-                    text: "We've been working hard at making Payload + TypeScript a match made in heaven, and with its newest version (",
+                    text: "We've been working hard at making MZinga + TypeScript a match made in heaven, and with its newest version (",
                   },
                   {
                     text: '0.13.6',
@@ -43,7 +43,7 @@ export function generateTsInterfacesData(authorId: string, categoryId: string, i
               {
                 children: [
                   {
-                    text: 'You can run this command whenever you need to regenerate your types, and then you can use these types in your Payload code directly.',
+                    text: 'You can run this command whenever you need to regenerate your types, and then you can use these types in your MZinga code directly.',
                   },
                 ],
               },
@@ -60,7 +60,7 @@ export function generateTsInterfacesData(authorId: string, categoryId: string, i
                 link: {
                   type: 'custom',
                   label: 'TypeScript Generation Docs',
-                  url: 'https://payloadcms.com/docs/typescript/generating-types',
+                  url: 'https://mzinga.io/docs/typescript/generating-types',
                   newTab: true,
                 },
                 id: '62007c57738c2e136e916272',
@@ -75,7 +75,7 @@ export function generateTsInterfacesData(authorId: string, categoryId: string, i
       },
     ],
     meta: {
-      title: 'Payload CMS - Feature - Auto-generate TypeScript Interfaces',
+      title: 'MZinga - Feature - Auto-generate TypeScript Interfaces',
       description:
         "You can now generate types automatically for all of your collections and globals to use within your app's code.",
       image: imageId,

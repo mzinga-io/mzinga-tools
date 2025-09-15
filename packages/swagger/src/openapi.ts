@@ -1,8 +1,8 @@
-import { Endpoint } from 'payload/config';
-import { CollectionConfig, GlobalConfig } from 'payload/types';
+import { Endpoint } from 'mzinga/config';
+import { CollectionConfig, GlobalConfig } from 'mzinga/types';
 
-import type { EndpointDocumentation, Example } from 'payload-openapi';
-export type { EndpointDocumentation, Example } from 'payload-openapi';
+import type { EndpointDocumentation, Example } from 'mzinga-openapi';
+export type { EndpointDocumentation, Example } from 'mzinga-openapi';
 
 type DocumentedEndpoint = Endpoint & EndpointDocumentation;
 

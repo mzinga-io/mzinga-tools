@@ -1,10 +1,10 @@
-import { RichTextField } from 'payload/dist/fields/config/types';
-import { Field } from 'payload/types';
+import { RichTextField } from 'mzinga/dist/fields/config/types';
+import { Field } from 'mzinga/types';
+import embeddedVideo from './embeddedVideo';
 import link from './link';
 import linkGroup from './linkGroup';
 import richText from './richText';
 import largeBody from './richText/largeBody';
-import embeddedVideo from './embeddedVideo';
 
 type Args = {
   name?: string;

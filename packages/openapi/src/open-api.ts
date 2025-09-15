@@ -1,14 +1,14 @@
-import fsAsync from 'fs/promises';
 import fs from 'fs';
+import fsAsync from 'fs/promises';
+import { SanitizedConfig } from 'mzinga/config';
 import type { OpenAPIV3 } from 'openapi-types';
 import path from 'path';
 import { DeepPartial } from 'ts-essentials';
-import { SanitizedConfig } from 'payload/config';
-import { analyzePayload } from './payload-config';
+import { analyzePayload } from './mzinga-config';
 
 import createBaseConfig from './base-config';
+import { RawOptions as Options, parseOptions } from './options';
 import { getUnsupportedSchema, isSupported, merge } from './utils';
-import { parseOptions, RawOptions as Options } from './options';
 
 interface PackageInfo {
   name?: string;
@@ -33,8 +33,8 @@ const readJsonFile = async <T = any>(relativePath: string): Promise<Partial<T>> 
 /**
  * Creates an openapi document for the given payload configuration
  */
-export const createDocument = async (payloadConfig: SanitizedConfig, options: Options = {}): Promise<OpenAPIV3.Document> => {
-  const parsedOptions = await parseOptions(options, payloadConfig);
+export const createDocument = async (mzingaConfig: SanitizedConfig, options: Options = {}): Promise<OpenAPIV3.Document> => {
+  const parsedOptions = await parseOptions(options, mzingaConfig);
 
   if (!isSupported()) {
     return getUnsupportedSchema(parsedOptions);
@@ -51,7 +51,7 @@ export const createDocument = async (payloadConfig: SanitizedConfig, options: Op
 
   const openApiInfo = await readJsonFile<DeepPartial<OpenAPIV3.Document>>('.openapi');
 
-  const payloadInfo = await analyzePayload(payloadConfig, parsedOptions);
+  const mzingaInfo = await analyzePayload(mzingaConfig, parsedOptions);
 
   const info: Partial<OpenAPIV3.InfoObject> = {
     title: name,
@@ -63,7 +63,7 @@ export const createDocument = async (payloadConfig: SanitizedConfig, options: Op
   return merge<OpenAPIV3.Document>(
     createBaseConfig(parsedOptions),
     { info },
-    payloadInfo,
+    mzingaInfo,
     openapi as OpenAPIV3.Document, // todo: fix DeepPartial indexer issue
     openApiInfo as OpenAPIV3.Document, // todo: fix DeepPartial indexer issue
   );

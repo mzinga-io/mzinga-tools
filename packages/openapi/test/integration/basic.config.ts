@@ -1,4 +1,4 @@
-import { buildConfig, Config } from 'payload/config';
+import { buildConfig, Config } from 'mzinga/config';
 
 const config: Config = {
   collections: [
@@ -61,7 +61,7 @@ const config: Config = {
       handler: (req, res): void => {
         res.json(req.payload.config);
       },
-      custom: { description: 'Get the sanitized payload config' },
+      custom: { description: 'Get the sanitized mzinga config' },
     },
   ],
   custom: { name: 'Customer portal' },

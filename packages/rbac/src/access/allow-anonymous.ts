@@ -1,18 +1,18 @@
-import type { Access } from 'payload/types';
-import { Query, User, Where } from '../types';
+import type { Access } from 'mzinga/types';
 import { createQuery } from '../query';
+import { Query, User, Where } from '../types';
 
 /**
  * Access control function that allows access to anyone
  * @param where optional filter
  * @returns the evaluated filter or `true`
  * @example
- * import { allowAnonymous } from 'payload-rbac';
+ * import { allowAnonymous } from 'mzinga-rbac';
  *
  * // Full access to anyone
  * const access = allowAnonymous();
  * @example
- * import { allowAnonymous } from 'payload-rbac';
+ * import { allowAnonymous } from 'mzinga-rbac';
  *
  * // Allow access to published documents for anyone
  * const access = allowAnonymous<Page>({ _status: { equals: 'published' } });
@@ -30,7 +30,7 @@ export const allowAnonymous = <TCollection extends object = any, TUser extends U
  * @param where the filter to apply
  * @returns the evaluated filter
  * @example
- * import { filtered } from 'payload-rbac';
+ * import { filtered } from 'mzinga-rbac';
  *
  * const access = filtered<Page>({ _status: { equals: 'published' } });
  * @see allowAnonymous
@@ -44,12 +44,12 @@ export const filtered: <TCollection extends object = any, TUser extends User = U
  * @param where optional filter
  * @returns a filter to only serve publish content, combined with the evaluated given filter, if provided
  * @example
- * import { allowPublished } from 'payload-rbac';
+ * import { allowPublished } from 'mzinga-rbac';
  *
  * // Allow access to published documents to anyone
  * const access = allowPublished();
  * @example
- * import { allowPublished } from 'payload-rbac';
+ * import { allowPublished } from 'mzinga-rbac';
  *
  * // Allow access to documents authored by Santa to anyone
  * const access = allowPublished<Page>({ author: { equals: 'Santa' } });

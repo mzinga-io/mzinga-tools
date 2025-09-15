@@ -1,9 +1,9 @@
 {
-  "name": "create-payload-api-docs",
-  "version": "1.4.0",
-  "description": "Create openapi docs for your payload cms",
+  "name": "create-mzinga-api-docs",
+  "version": "0.0.1",
+  "description": "Create openapi docs for your MZinga instance",
   "bin": {
-    "create-payload-api-docs": "bin/cli.js"
+    "create-mzinga-api-docs": "bin/cli.js"
   },
   "dependencies": {
     "@swc/core": "^1.3.41",
@@ -11,8 +11,8 @@
     "command-line-args": "^5.2.1",
     "command-line-usage": "^7.0.1",
     "get-tsconfig": "^4.5.0",
-    "payload": "^1.9.0",
-    "payload-openapi": "^1.4.0"
+    "mzinga": "0.0.2",
+    "@mzinga/plugin-openapi": "0.0.1"
   },
   "scripts": {
     "build": "rimraf dist && tsc --sourceMap false",
@@ -26,17 +26,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/teunmooij/payload-tools.git"
+    "url": "git+https://github.com/mzinga-io/mzinga-tools.git"
   },
   "keywords": [
-    "payload",
-    "payloadcms",
+    "mzinga",
     "openapi"
   ],
-  "author": "Teun Mooij",
+  "author": "MZinga",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/teunmooij/payload-tools/issues"
+    "url": "https://github.com/mzinga-io/mzinga-tools/issues"
   },
-  "homepage": "https://github.com/teunmooij/payload-tools/#readme"
+  "homepage": "https://github.com/mzinga-io/mzinga-tools/#readme"
 }

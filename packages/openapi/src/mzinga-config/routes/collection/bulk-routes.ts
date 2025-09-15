@@ -1,5 +1,5 @@
+import { SanitizedCollectionConfig } from 'mzinga/types';
 import type { OpenAPIV3 } from 'openapi-types';
-import { SanitizedCollectionConfig } from 'payload/types';
 import { basicParameters, findParameters } from '../../../base-config';
 import { Options } from '../../../options';
 import { createRef, createResponse } from '../../../schemas';

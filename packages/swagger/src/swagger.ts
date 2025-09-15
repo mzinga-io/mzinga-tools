@@ -1,5 +1,5 @@
-import { Payload } from 'payload';
-import { createDocument } from 'payload-openapi';
+import { Payload } from 'mzinga';
+import { createDocument } from 'mzinga-openapi';
 import swaggerUi from 'swagger-ui-express';
 import { Options } from './types';
 import { serveFile } from './utils/serve-file';

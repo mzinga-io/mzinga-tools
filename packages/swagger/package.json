@@ -1,7 +1,7 @@
 {
-  "name": "payload-swagger",
-  "version": "1.4.0",
-  "description": "Swagger plugin for payload cms",
+  "name": "@mzinga/plugin-swagger",
+  "version": "0.0.1",
+  "description": "Swagger plugin for MZinga",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -13,11 +13,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "payload-openapi": "^1.4.0",
+    "@mzinga/openapi": "^1.4.0",
     "swagger-ui-express": "^4.6.2"
   },
   "peerDependencies": {
-    "payload": "^1.6.22"
+    "mzinga": "0.0.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
@@ -36,7 +36,7 @@
     "husky": "^8.0.3",
     "jest": "^29.5.0",
     "lint-staged": "^13.1.2",
-    "payload": "^1.9.0",
+    "mzinga": "0.0.2",
     "prettier": "^2.8.4",
     "rimraf": "^4.4.0",
     "ts-jest": "^29.1.0",
@@ -45,19 +45,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/teunmooij/payload-tools.git"
+    "url": "git+https://github.com/mzinga-io/mzinga-tools.git"
   },
   "keywords": [
     "swagger",
-    "payload",
-    "payloadcms",
-    "payload-plugin",
+    "mzinga",
+    "mzinga-plugin",
     "openAPI"
   ],
-  "author": "Teun Mooij",
+  "author": "MZinga",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/teunmooij/payload-tools/issues"
+    "url": "https://github.com/mzinga-io/mzinga-tools/issues"
   },
-  "homepage": "https://github.com/teunmooij/payload-tools/#readme"
+  "homepage": "https://github.com/mzinga-io/mzinga-tools/#readme"
 }

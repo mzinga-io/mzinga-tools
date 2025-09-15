@@ -1,18 +1,18 @@
+import { SanitizedConfig } from 'mzinga/config';
+import { SanitizedGlobalConfig } from 'mzinga/types';
 import type { OpenAPIV3 } from 'openapi-types';
-import { SanitizedGlobalConfig } from 'payload/types';
-import { SanitizedConfig } from 'payload/config';
-import { Options } from '../../../options';
 import { basicParameters } from '../../../base-config';
+import { Options } from '../../../options';
 import { createRef, createRequestBody, createResponse, createUpsertConfirmationSchema, entityToSchema } from '../../../schemas';
 import { getSingular, getSingularSchemaName, merge } from '../../../utils';
-import { getCustomPaths } from '../custom-paths';
 import { getRouteAccess } from '../../route-access';
+import { getCustomPaths } from '../custom-paths';
 import { createVersionRoutes } from '../version-paths';
 
 export const getGlobalRoutes = async (
   global: SanitizedGlobalConfig,
   options: Options,
-  payloadConfig: SanitizedConfig,
+  mzingaConfig: SanitizedConfig,
 ): Promise<Pick<Required<OpenAPIV3.Document>, 'paths' | 'components'>> => {
   const singleItem = getSingular(global);
   const schemaName = getSingularSchemaName(global);
@@ -43,7 +43,7 @@ export const getGlobalRoutes = async (
     },
   };
 
-  const { schema, fieldDefinitions } = await entityToSchema(payloadConfig, global);
+  const { schema, fieldDefinitions } = await entityToSchema(mzingaConfig, global);
   const { example, examples } = global.custom?.openapi || {};
 
   const components: OpenAPIV3.ComponentsObject = {
@@ -61,7 +61,7 @@ export const getGlobalRoutes = async (
     },
   };
 
-  const versionRoutes = await createVersionRoutes(global, options, payloadConfig);
+  const versionRoutes = await createVersionRoutes(global, options, mzingaConfig);
   const customRoutes = getCustomPaths(global, 'global');
 
   return merge({ paths, components }, versionRoutes, customRoutes);

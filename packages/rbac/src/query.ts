@@ -1,4 +1,4 @@
-import { AccessArgs } from 'payload/config';
+import { AccessArgs } from 'mzinga/config';
 import { AccessQuery, Query, User, Where } from './types';
 
 const toWhere = <TCollection extends object, TUser extends User = User>(

@@ -1,6 +1,6 @@
-import { CollectionConfig } from 'payload/types';
+import { defineCollection } from 'mzinga-swagger';
+import { CollectionConfig } from 'mzinga/types';
 import CategorySummary from '../components/CategorySummary';
-import { defineCollection } from 'payload-swagger';
 
 const Categories: CollectionConfig = defineCollection({
   slug: 'categories',

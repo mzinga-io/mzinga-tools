@@ -1,4 +1,4 @@
-import { SanitizedCollectionConfig, SanitizedGlobalConfig } from 'payload/types';
+import { SanitizedCollectionConfig, SanitizedGlobalConfig } from 'mzinga/types';
 
 const hasCollectionLabel = (collection: any, kind: 'singular' | 'plural'): collection is SanitizedCollectionConfig =>
   Boolean(collection.labels?.[kind]);

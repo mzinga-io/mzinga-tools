@@ -1,8 +1,8 @@
-import { Block } from 'payload/types';
+import { Block } from 'mzinga/types';
 import linkGroup from '../fields/linkGroup';
 import richText from '../fields/richText';
-import Video from '../fields/richText/video';
 import HR from '../fields/richText/hr';
+import Video from '../fields/richText/video';
 
 export const Content: Block = {
   slug: 'content',

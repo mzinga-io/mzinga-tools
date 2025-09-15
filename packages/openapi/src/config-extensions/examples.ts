@@ -1,4 +1,4 @@
-import { CollectionConfig, GlobalConfig } from 'payload/types';
+import { CollectionConfig, GlobalConfig } from 'mzinga/types';
 
 export type Example<T = any> =
   | {

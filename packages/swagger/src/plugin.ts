@@ -1,11 +1,11 @@
-import { Payload } from 'payload';
-import { Config } from 'payload/config';
+import { Payload } from 'mzinga';
+import { Config } from 'mzinga/config';
+import path from 'path';
 import { loadSwagger } from './swagger';
 import { Options } from './types';
-import path from 'path';
 
 /**
- * Payload swagger plugin
+ * MZinga swagger plugin
  */
 export const swagger =
   (options?: Options) =>

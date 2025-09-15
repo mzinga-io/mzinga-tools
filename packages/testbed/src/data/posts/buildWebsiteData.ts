@@ -24,7 +24,7 @@ export function buildWebsiteData(authorId: string, categoryId: string, imageId: 
                 type: 'p',
                 children: [
                   {
-                    text: 'Hi, my name is James. Outside of co-founding Payload CMS, I also operate a professional design firm called ',
+                    text: 'Hi, my name is James. Outside of co-founding MZinga, I also operate a professional design firm called ',
                   },
                   {
                     type: 'link',
@@ -166,7 +166,7 @@ export function buildWebsiteData(authorId: string, categoryId: string, imageId: 
                         ],
                       },
                       {
-                        text: '​ - Payload introduction',
+                        text: ' - MZinga introduction',
                       },
                     ],
                   },
@@ -187,7 +187,7 @@ export function buildWebsiteData(authorId: string, categoryId: string, imageId: 
                         ],
                       },
                       {
-                        text: '​ - Payload + NextJS boilerplate setup',
+                        text: ' - MZinga + NextJS boilerplate setup',
                       },
                     ],
                   },
@@ -208,7 +208,7 @@ export function buildWebsiteData(authorId: string, categoryId: string, imageId: 
                         ],
                       },
                       {
-                        text: ' - CMS scaffolding (form submissions, studies, shared Payload fields, etc.)',
+                        text: ' - CMS scaffolding (form submissions, studies, shared MZinga fields, etc.)',
                       },
                     ],
                   },
@@ -339,7 +339,7 @@ export function buildWebsiteData(authorId: string, categoryId: string, imageId: 
                     type: 'p',
                     children: [
                       {
-                        text: "This is episode 1 - and it's my first ever YouTube video. I would greatly appreciate any candid feedback that this community has for me, and if you haven't already, please give Payload a shot. We'd love to hear your thoughts.",
+                        text: "This is episode 1 - and it's my first ever YouTube video. I would greatly appreciate any candid feedback that this community has for me, and if you haven't already, please give MZinga a shot. We'd love to hear your thoughts.",
                       },
                     ],
                   },
@@ -364,7 +364,7 @@ export function buildWebsiteData(authorId: string, categoryId: string, imageId: 
       },
     ],
     meta: {
-      title: 'Payload CMS - Building a Professionally Designed Website with NextJS & TypeScript - Ep. 1',
+      title: 'MZinga - Building a Professionally Designed Website with NextJS & TypeScript - Ep. 1',
       description:
         'Have you ever wondered how professional design firms go about building high-end websites? If so, this series is for you.',
       image: imageId,

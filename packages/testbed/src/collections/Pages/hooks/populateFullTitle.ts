@@ -1,4 +1,4 @@
-import { FieldHook } from 'payload/types';
+import { FieldHook } from 'mzinga/types';
 import { generateFullTitle } from '../../../utilities/generateFullTitle';
 
 const populateFullTitle: FieldHook = async ({ data, originalDoc }) =>

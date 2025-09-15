@@ -1,23 +1,23 @@
+import { Endpoint, SanitizedConfig } from 'mzinga/config';
+import { SanitizedCollectionConfig, SanitizedGlobalConfig } from 'mzinga/types';
 import type { OpenAPIV3 } from 'openapi-types';
 import nodePath from 'path';
-import { Endpoint, SanitizedConfig } from 'payload/config';
-import { SanitizedCollectionConfig, SanitizedGlobalConfig } from 'payload/types';
-import { createResponse } from '../../schemas';
-import { getEndpointDocumentation } from '../../config-extensions';
 import { objectEntries } from 'ts-powertools';
+import { getEndpointDocumentation } from '../../config-extensions';
+import { createResponse } from '../../schemas';
 
 type Config = SanitizedConfig | SanitizedCollectionConfig | SanitizedGlobalConfig;
-type ConfigType = 'payload' | 'global' | 'collection';
-const isPayloadConfig = (config: Config): config is SanitizedConfig => !('slug' in config);
+type ConfigType = 'payload' | 'global' | 'collection' | 'mzinga';
+const isMZingaConfig = (config: Config): config is SanitizedConfig => !('slug' in config);
 
 const getBasePath = (config: Config, type: ConfigType) => {
-  if (isPayloadConfig(config)) return '';
+  if (isMZingaConfig(config)) return '';
   if (type === 'global') return `/globals/${config.slug}`;
   return `/${config.slug}`;
 };
 
 const getTags = (config: Config, type: ConfigType) => {
-  if (isPayloadConfig(config)) return ['custom'];
+  if (isMZingaConfig(config)) return ['custom'];
   if (type === 'global') return [`global ${config.slug}`];
   return [config.slug];
 };

@@ -1,7 +1,7 @@
 name: Bug report
 description: Create a report to help us improve
-title: "[Bug]: "
-labels: ["bug"]
+title: '[Bug]: '
+labels: ['bug']
 assignees:
   - teunmooij
 body:
@@ -16,11 +16,11 @@ body:
       description: For which tool do you want to report a bug?
       multiple: false
       options:
-        - payload-openapi
-        - payload-swagger
-        - create-payload-api-docs
-        - payload-rbac
-        - payload-query
+        - mzinga-openapi
+        - mzinga-swagger
+        - create-mzinga-api-docs
+        - mzinga-rbac
+        - mzinga-query
     validations:
       required: true
   - type: textarea
@@ -46,14 +46,14 @@ body:
     id: version
     attributes:
       label: Tool version
-      description: What is the version of the payload tool?
+      description: What is the version of the mzinga tool?
     validations:
       required: true
   - type: input
-    id: payload-version
+    id: mzinga-version
     attributes:
-      label: Payload version
-      description: What version of Payload are you running?
+      label: MZinga version
+      description: What version of MZinga are you running?
     validations:
       required: true
   - type: input

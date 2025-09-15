@@ -1,16 +1,16 @@
+import { SanitizedCollectionConfig } from 'mzinga/types';
 import type { OpenAPIV3 } from 'openapi-types';
-import { SanitizedCollectionConfig } from 'payload/types';
 
 import type { Options } from '../../../../options';
 import { createRef, createResponse } from '../../../../schemas';
 
 import { getAuthPaths } from './auth-paths';
 
-import me from './me';
-import { getEmailVerificationPaths } from './email-paths';
-import { getUnlockPaths } from './unlock-paths';
-import { getPasswordRecoveryPaths } from './recovery-paths';
 import { getSingularSchemaName } from '../../../../utils';
+import { getEmailVerificationPaths } from './email-paths';
+import me from './me';
+import { getPasswordRecoveryPaths } from './recovery-paths';
+import { getUnlockPaths } from './unlock-paths';
 
 export const getAuthRoutes = (
   collection: SanitizedCollectionConfig,

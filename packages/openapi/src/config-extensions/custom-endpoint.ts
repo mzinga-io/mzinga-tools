@@ -1,5 +1,5 @@
+import { Endpoint } from 'mzinga/config';
 import { OpenAPIV3 } from 'openapi-types';
-import { Endpoint } from 'payload/config';
 
 export interface EndpointDocumentation {
   summary?: string;

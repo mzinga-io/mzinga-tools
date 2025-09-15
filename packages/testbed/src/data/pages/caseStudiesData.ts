@@ -109,7 +109,7 @@ export function caseStudiesData(imageId: string, authorId: string, parentId: str
     parent: parentId,
     author: authorId,
     meta: {
-      title: 'Payload CMS Demo - Case Studies',
+      title: 'MZinga CMS Demo - Case Studies',
       description: 'Case Study 1',
       image: imageId,
     },

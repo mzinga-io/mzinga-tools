@@ -1,6 +1,6 @@
-import type { SelectField, Access as PayloadAccess, AccessArgs } from 'payload/types';
-import { Operator } from 'payload/types';
-import type { ObjectPaths, ValueAtPath, Join, Split, IsAny } from 'ts-powertypes';
+import type { AccessArgs, Access as PayloadAccess, SelectField } from 'mzinga/types';
+import { Operator } from 'mzinga/types';
+import type { IsAny, Join, ObjectPaths, Split, ValueAtPath } from 'ts-powertypes';
 
 type NotNull<T> = T extends null ? never : T;
 
@@ -16,7 +16,7 @@ export type Access<TData = any, TUser extends User = User> = PayloadAccess<TData
 };
 
 /**
- * Payload-rbac plugin options
+ * MZinga-rbac plugin options
  */
 export interface Options {
   /**

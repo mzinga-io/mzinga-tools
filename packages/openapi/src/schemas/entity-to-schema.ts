@@ -1,8 +1,9 @@
-import type { OpenAPIV3 } from 'openapi-types';
-import type { SanitizedConfig } from 'payload/config';
-import type { SanitizedCollectionConfig, SanitizedGlobalConfig } from 'payload/types';
-import { entityToJSONSchema as payloadEntityToJSONSchema } from 'payload/utilities';
 import convert from '@openapi-contrib/json-schema-to-openapi-schema';
+import payload from 'mzinga';
+import type { SanitizedConfig } from 'mzinga/config';
+import type { SanitizedCollectionConfig, SanitizedGlobalConfig } from 'mzinga/types';
+import { entityToJSONSchema as payloadEntityToJSONSchema } from 'mzinga/utilities';
+import type { OpenAPIV3 } from 'openapi-types';
 import { reduceAsync } from 'ts-powertools';
 import { getDescription, getSingularSchemaName } from '../utils';
 
@@ -49,7 +50,7 @@ export const entityToSchema = async (
   incomingEntity: SanitizedCollectionConfig | SanitizedGlobalConfig,
 ): Promise<{ schema: OpenAPIV3.SchemaObject; fieldDefinitions: Record<string, OpenAPIV3.SchemaObject> }> => {
   const fieldDefinitionsMap = new Map();
-  const jsonschema = payloadEntityToJSONSchema(config, incomingEntity, fieldDefinitionsMap);
+  const jsonschema = payloadEntityToJSONSchema(config, incomingEntity, fieldDefinitionsMap,"text", payload);
   const rawSchema = await convert(jsonschema);
   const fieldDefinitions = await reduceAsync(
     Array.from(fieldDefinitionsMap.entries()),

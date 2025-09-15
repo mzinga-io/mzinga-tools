@@ -1,5 +1,5 @@
-import type { Where } from 'payload/types';
-import { requireOne, allowAnyUser, allowEnvironmentValues, blockAll } from '../../src';
+import type { Where } from 'mzinga/types';
+import { allowAnyUser, allowEnvironmentValues, blockAll, requireOne } from '../../src';
 import { mockRequest } from '../mocks/request-mock';
 import { createUser } from '../mocks/user';
 

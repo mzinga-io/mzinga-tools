@@ -1,4 +1,4 @@
-import { Field } from 'payload/types';
+import { Field } from 'mzinga/types';
 import deepMerge from '../utilities/deepMerge';
 
 type AspectRatio = (overrides?: Partial<Field>) => Field;

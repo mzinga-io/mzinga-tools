@@ -1,7 +1,7 @@
-import { Block } from 'payload/types';
+import { Block } from 'mzinga/types';
+import embeddedVideo from '../fields/embeddedVideo';
 import linkGroup from '../fields/linkGroup';
 import richText from '../fields/richText';
-import embeddedVideo from '../fields/embeddedVideo';
 
 export const MediaContent: Block = {
   slug: 'mediaContent',

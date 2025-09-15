@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useDocumentInfo } from 'mzinga/dist/admin/components/utilities/DocumentInfo';
 import qs from 'qs';
-import { useDocumentInfo } from 'payload/dist/admin/components/utilities/DocumentInfo';
+import React, { useEffect, useState } from 'react';
 
 const get = (url: string, params: unknown = {}): Promise<Response> => {
   const query = qs.stringify(params, { addQueryPrefix: true });
@@ -51,35 +51,25 @@ const CategorySummary: React.FC = () => {
     }
   }, [id]);
 
-
   if (!id) {
     return null;
   }
 
   if (error) {
-    return (<span>There was a problem fetching data</span>);
+    return <span>There was a problem fetching data</span>;
   }
 
   return (
     <div>
-      <h4>
-        Summary
-      </h4>
+      <h4>Summary</h4>
       {isLoading ? (
-          <p>
-            loading...
-          </p>
+        <p>loading...</p>
       ) : (
         <p>
-            {/* collection index filters use url params to allow linking to queries */}
-          <a href={`/admin/collections/posts?where[or][0][and][0][category][in][0]=${id}`} >
-            {postCount}
-            {' '}
-            Posts
-          </a>
+          {/* collection index filters use url params to allow linking to queries */}
+          <a href={`/admin/collections/posts?where[or][0][and][0][category][in][0]=${id}`}>{postCount} Posts</a>
         </p>
       )}
-
     </div>
   );
 };

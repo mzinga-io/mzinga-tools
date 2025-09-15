@@ -1,4 +1,4 @@
-@import '~payload/scss';
+@import '~mzinga/scss';
 
 .video-rich-text-button {
   .btn {
@@ -31,8 +31,8 @@
     }
   }
 
-	&__template {
-		position: relative;
+  &__template {
+    position: relative;
     z-index: 1;
-	}
+  }
 }

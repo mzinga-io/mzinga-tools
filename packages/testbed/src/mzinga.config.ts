@@ -1,21 +1,21 @@
-import { buildConfig } from 'payload/config';
-import formBuilder from '@payloadcms/plugin-form-builder';
-import nestedDocs from '@payloadcms/plugin-nested-docs';
-import seo from '@payloadcms/plugin-seo';
-import { selectPlugin } from 'payload-query';
-import rbac from 'payload-rbac';
-import { swagger, defineEndpoint } from 'payload-swagger';
+import formBuilder from '@mzinga/plugin-form-builder';
+import nestedDocs from '@mzinga/plugin-nested-docs';
+import seo from '@mzinga/plugin-seo';
+import { selectPlugin } from 'mzinga-query';
+import rbac from 'mzinga-rbac';
+import { defineEndpoint, swagger } from 'mzinga-swagger';
+import { buildConfig } from 'mzinga/config';
 import path from 'path';
+import { Alerts } from './collections/Alerts';
 import Categories from './collections/Categories';
 import Media from './collections/Media';
+import { Pages } from './collections/Pages';
 import Posts from './collections/Posts';
 import Users from './collections/Users';
-import { Pages } from './collections/Pages';
-import MainMenu from './globals/MainMenu';
-import BeforeLogin from './components/BeforeLogin';
 import AfterDashboard from './components/AfterDashboard';
-import { Alerts } from './collections/Alerts';
 import BeforeDashboard from './components/BeforeDashboard';
+import BeforeLogin from './components/BeforeLogin';
+import MainMenu from './globals/MainMenu';
 
 // the payload config is the entrypoint for configuring the entire application
 // all the API REST, GraphQL, authentication, file uploads, data layer and admin UI is built from the config
@@ -26,7 +26,7 @@ export default buildConfig({
     // the user collection slug to use for authenticating to the admin panel, one per express app
     user: Users.slug,
 
-    // override existing payload styles with custom look
+    // override existing mzinga styles with custom look
     css: path.resolve(__dirname, './styles/custom.scss'),
 
     // custom components added to show demo info
@@ -48,7 +48,7 @@ export default buildConfig({
     }),
   },
 
-  // collections in Payload are synonymous with database tables, models or entities from other frameworks and systems
+  // collections in MZinga are synonymous with database tables, models or entities from other frameworks and systems
   collections: [Categories, Media, Posts, Pages, Users, Alerts],
 
   // globals are a single-instance collection, often used for navigation or site settings that live in one place
@@ -102,7 +102,7 @@ export default buildConfig({
         authPaths: false,
         preferences: false,
       },
-      payloadVersion: '1.6.26', // not needed for most scenario's
+      mzingaVersion: '0.0.2', // not needed for most scenario's
       throwOnError: false,
     }),
     rbac({

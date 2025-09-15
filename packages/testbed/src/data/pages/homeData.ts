@@ -9,7 +9,7 @@ export function homeData(imageId: string, userId: string) {
             type: 'h1',
             children: [
               {
-                text: 'Payload Demo',
+                text: 'MZinga Demo',
               },
             ],
           },
@@ -29,7 +29,7 @@ export function homeData(imageId: string, userId: string) {
               },
               {
                 type: 'link',
-                url: 'https://payloadcms.com',
+                url: 'https://mzinga.io',
                 newTab: false,
                 children: [
                   {
@@ -96,7 +96,7 @@ export function homeData(imageId: string, userId: string) {
                     },
                   ],
                   link: {
-                    url: 'https://payloadcms.com',
+                    url: 'https://mzinga.io',
                     type: 'custom',
                   },
                   alignment: 'center',
@@ -162,7 +162,7 @@ export function homeData(imageId: string, userId: string) {
     status: 'published',
     author: userId,
     meta: {
-      title: 'Payload CMS Demo - Home',
+      title: 'MZinga CMS Demo - Home',
       description:
         'Here is a column of content and it has an embedded Media element within it. This content will be used to generate a Meta Description.',
       image: imageId,

@@ -1,4 +1,4 @@
-import type { Access as PayloadAccess, AccessArgs, Where } from 'payload/types';
+import type { AccessArgs, Access as PayloadAccess, Where } from 'mzinga/types';
 import { Access } from '../types';
 
 const isPromise = (value: any): value is Promise<boolean> => typeof value === 'object' && 'then' in value;

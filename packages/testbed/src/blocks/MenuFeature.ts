@@ -1,4 +1,4 @@
-import { Block } from 'payload/types';
+import { Block } from 'mzinga/types';
 import link from '../fields/link';
 
 export const MenuFeature: Block = {

@@ -1,5 +1,5 @@
+import { SanitizedCollectionConfig } from 'mzinga/types';
 import type { OpenAPIV3 } from 'openapi-types';
-import { SanitizedCollectionConfig } from 'payload/types';
 import type { Options } from '../../../../options';
 import { createRef } from '../../../../schemas';
 import { getAuth } from '../../../route-access';

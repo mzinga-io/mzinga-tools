@@ -1,10 +1,10 @@
-import { CollectionConfig } from 'payload/types';
-import { allowAnyUser, allowPublished, requireOne } from 'payload-rbac';
+import { allowAnyUser, allowPublished, requireOne } from 'mzinga-rbac';
+import { defineEndpoint } from 'mzinga-swagger';
+import { CollectionConfig } from 'mzinga/types';
 import { Content } from '../blocks/Content';
 import { Media } from '../blocks/Media';
 import { MediaContent } from '../blocks/MediaContent';
 import { MediaSlider } from '../blocks/MediaSlider';
-import { defineEndpoint } from 'payload-swagger';
 
 const Posts: CollectionConfig = {
   // the slug is used for naming the collection in the database and the APIs that are open. For example: api/posts/${id}
@@ -26,7 +26,7 @@ const Posts: CollectionConfig = {
       allowPublished({ publishDate: { less_than: () => new Date() } }),
     ),
   },
-  // versioning with drafts enabled tells Payload to save documents to a separate collection in the database and allow publishing
+  // versioning with drafts enabled tells MZinga to save documents to a separate collection in the database and allow publishing
   versions: {
     drafts: true,
   },
@@ -34,7 +34,7 @@ const Posts: CollectionConfig = {
     {
       name: 'title',
       type: 'text',
-      // localized fields are stored as keyed objects to represent each locale listed in the payload.config.ts. For example: { en: 'English', es: 'Espanol', ...etc }
+      // localized fields are stored as keyed objects to represent each locale listed in the mzinga.config.ts. For example: { en: 'English', es: 'Espanol', ...etc }
       localized: true,
     },
     {
