@@ -63,8 +63,8 @@ const getPath = (basePath: string, relativePath: string): { path: string; parame
   const sanitizedPath = relativePath
     .split('/')
     .map(part => {
-      const match = part.match(/^(?<param>:)?(?<name>.*)(?<optional>\?)?$/);
-      const { param, name, optional } = match!.groups!;
+      // positional groups: named capturing groups are rejected by TypeScript >= 5.5 for an ES2015 target
+      const [, param, name, optional] = part.match(/^(:)?(.*)(\?)?$/)!;
       if (!param) return part;
 
       parameters.push({

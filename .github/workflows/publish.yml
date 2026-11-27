@@ -6,30 +6,32 @@ on:
       workspace:
         required: true
         type: string
-      depends_on:
-        type: string
     secrets:
       NPM_TOKEN:
         required: true
+
+permissions:
+  contents: read
 
 jobs:
   build_and_publish:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: "18"
+          node-version: "24"
+          registry-url: "https://registry.npmjs.org"
+          # no dependency cache in the release job (cache poisoning hardening)
+          package-manager-cache: false
 
       - run: npm ci
-
       - run: npm test
-      # - name: Upload coverage to Codecov
-      #   uses: codecov/codecov-action@v3
-      - name: build dependencies
-        if: ${{ inputs.depends_on }}
-        run: npm run build -w ${{ inputs.depends_on }}
-      - run: npm run build -w ${{ inputs.workspace }}
-      - run: npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
+      # builds all workspaces in the order listed in package.json (openapi first, which swagger and
+      # create-api-docs depend on); replaces the former depends_on input
+      - run: npm run build
+
       - run: npm publish -w ${{ inputs.workspace }} --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

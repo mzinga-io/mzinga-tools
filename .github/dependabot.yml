@@ -1,0 +1,35 @@
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    ignore:
+      # payload v1 -> mzinga is a planned port, not a dependency bump
+      - dependency-name: "payload"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@payloadcms/*"
+        update-types: ["version-update:semver-major"]
+    groups:
+      minors:
+        update-types:
+          - "minor"
+          - "patch"
+      major:
+        update-types:
+          - "major"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    groups:
+      minors:
+        update-types:
+          - "minor"
+          - "patch"
+      major:
+        update-types:
+          - "major"

@@ -8,6 +8,9 @@ on:
   #   paths:
   #     - "packages/query/**"
 
+permissions:
+  contents: read
+
 jobs:
   build_and_publish:
     uses: ./.github/workflows/publish.yml
