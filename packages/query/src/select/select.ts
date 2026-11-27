@@ -11,7 +11,7 @@ const toBoolean = (value: any) =>
 export const selectInternal = <T extends TypeWithID>(fields: Partial<Record<keyof T, any>>, doc: T): Partial<T> => {
   const omitOnly = objectValues(fields).every(field => !field);
 
-  return objectEntries(fields).reduce(
+  return objectEntries(fields as Record<keyof T, any>).reduce(
     (result, [key, value]) => {
       if (toBoolean(value)) {
         result[key] = doc[key];

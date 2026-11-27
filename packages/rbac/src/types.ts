@@ -4,7 +4,7 @@ import type { ObjectPaths, ValueAtPath, Join, Split, IsAny } from 'ts-powertypes
 
 type NotNull<T> = T extends null ? never : T;
 
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export type User<TRoles extends string = string, TRest extends object = {}> = NotNull<AccessArgs<any, {}>['req']['user']> & {
   roles: TRoles[];
 } & TRest;

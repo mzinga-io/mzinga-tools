@@ -1,6 +1,10 @@
 {
   "name": "payload-tools",
   "private": true,
+  "engines": {
+    "node": ">=22.19"
+  },
+  "packageManager": "npm@11.19.1",
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "test": "npm test --workspaces --if-present",

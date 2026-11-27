@@ -29,7 +29,7 @@ export const getPayloadVersion = async (): Promise<Version | undefined> => {
   try {
     const { version } = await import(path.join(process.cwd(), 'node_modules/payload/package.json'));
     return version ? toVersion(version) : undefined;
-  } catch (e) {
+  } catch {
     return undefined;
   }
 };

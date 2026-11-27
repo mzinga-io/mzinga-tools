@@ -6,7 +6,7 @@ export function generateMailingListSubmission(parentFormId: string) {
     submissionData: [
       {
         field: 'first',
-        value: faker.name.firstName(),
+        value: faker.person.firstName(),
       },
       {
         field: 'email',
@@ -24,11 +24,11 @@ export function generateContactFormSubmission(parentFormId: string) {
     submissionData: [
       {
         field: 'first',
-        value: faker.name.firstName(),
+        value: faker.person.firstName(),
       },
       {
         field: 'last',
-        value: faker.name.lastName(),
+        value: faker.person.lastName(),
       },
       {
         field: 'email',

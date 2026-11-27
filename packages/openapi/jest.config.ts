@@ -7,6 +7,9 @@ const config: Config = {
   coveragePathIgnorePatterns: [],
   setupFilesAfterEnv: [], // extensions go here
   preset: 'ts-jest',
+  // the integration tests load (and ts-jest compiles) a payload config in beforeAll, which can exceed
+  // the 5s default on slower runners / Node 24
+  testTimeout: 30000,
 };
 
 export default config;

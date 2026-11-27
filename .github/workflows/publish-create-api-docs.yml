@@ -8,11 +8,13 @@ on:
   #   paths:
   #     - "packages/create-api-docs/**"
 
+permissions:
+  contents: read
+
 jobs:
   build_and_publish:
     uses: ./.github/workflows/publish.yml
     with:
       workspace: packages/create-api-docs
-      depends_on: packages/openapi
-    secrets: 
+    secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
